@@ -1,128 +1,101 @@
-*{
+/* Color primario: #14539a
+   Color secundario #0d3562 */
+   *{
+    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: Roboto;
-    padding: 90px 20px 0px;
-}
-
-.header {
-    background-color: rgb(1, 4, 154);
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
-    margin: 0 auto;
-}
-
-.nav-link {
-    color: white;
     text-decoration: none;
-}
-
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;
-    margin-top: 2px;
-}
-
-.nav-menu{
-    display: flex;
-    margin-right: 40px;
     list-style: none;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.menu{
+    position: fixed;
 }
 
-.nav-menu-item {
-    font-size: 18px;
-    margin: 0 10px;
+nav{
+    background-color: #14539a;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
     line-height: 80px;
-    text-transform: uppercase;
-    width: max-content;
+    margin: 0 5px;   
 }
-.nav-menu-link{
-    padding: 8px 12px;
-    border-radius: 3px;
-}
-.nav-menu-link:hover {
-    background-color: rgba(2, 7, 92, 0.662);
-    transition: 0.5s;
+nav ul li a{
+    color: aliceblue;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 15px;
 }
 
-.nav-toggle{
-    color: white;
-    background: none;
-    border: none;
+li a.active, li a:hover{
+    background: #0d3562;
+    transition: .5s;
+}
+.checkbtn{
     font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
     display: none;
 }
+#check{
+    display: none;
+}
+.hero{
+    background: url(/media/carrousel/carrousel6.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+.noticias h1{
+    margin-left: 55px;
+    margin-top: 40px;
+    font-size: 30px;
+}
 
-@media (max-width: 925px) {
-    body{
-        font-family: Roboto;
-        padding-top: 70px;
-    }
-    
-    .header {
-        height: 60px;
-        
-    }
-    
-    
-    .logo{
-        font-size: 35px;
-        font-weight: bold;
-        padding: 0 20px;
-        line-height: 60px;
-        margin-top: 2px;
-    }
-    
-    .nav-menu{
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        background-color: rgb(1, 4, 154);
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
 
-        height: calc(100% - 60px);
-        overflow-y: auto;
-
-        left: 100%;
-        transition: left 0.3s;
+@media (max-width: 893px){
+    .enlace{
+        padding-left: 20px;
     }
-    
-    .nav-menu-item {
-        line-height: 70px;
+    nav ul li a{
+        font-size: 16px;
     }
-    
-    .nav-menu-link:hover {
-        background: none;
-        color: rgb(9, 88, 149);
-    }
-    
-    .nav-toggle{
+    .checkbtn{
         display: block;
     }
-
-    .nav-menu_visible{
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #14539a;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    li a:hover, li a.active{
+        background: #0d3562;
+        color: #ffffff;
+    }
+    #check:checked ~ ul{
         left: 0;
-
     }
 }

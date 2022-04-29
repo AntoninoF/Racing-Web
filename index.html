@@ -4,60 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Racing Club Carhué</title>
+    <title>Racing Club Carhue</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
-    <script defer src="index.js"></script>
-    <link rel="icon" type="icon/png" href="/media/favicon.png">
+    <script
+        src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous">
+    </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo nav-link"><img src="/media/Somos carhue blanco.png" width="195" alt=""></a>
-            <button class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu .nav-menu_visible">
-                <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link nav-link">Noticias</a>
-                </li>
-                <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link nav-link">Galeria</a>
-                </li>
-                <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link nav-link">Partidos</a>
-                </li>
-                <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link nav-link">Tienda</a>
-                </li>
-                <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link nav-link">Nosotros</a>
-                </li>
-            </ul>
-        </nav>
-        <section>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/media/carrousel/carrousel1.jpg" class="d-block w-100" alt="festejo de gol">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/media/carrousel/carrousel2.jpg" class="d-block w-100" alt="victoria vs san martin">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/media/carrousel/carrousel3.jpg" class="d-block w-100" alt="tribuna de Racing">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </section>
-    </header>
+    <nav class="menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="/media/Somos carhue blanco.png" width="195" alt="somos carhué" class="logo">
+        </a>
+        <ul>
+            <li><a href="#noticias">NOTICIAS</a></li>
+            <li><a href="#">GALERIA</a></li>
+            <li><a href="#">PARTIDOS</a></li>
+            <li><a href="#">TIENDA</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <section class="hero"></section>
+    <section id="noticias" class="noticias">
+        <h1>Noticias</h1>
+        <div class="card" style="width: 18rem;">
+            <img src="/media/Noticias/noticia1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Resultados de la cuarta fecha</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus</p>
+              <a href="#" class="btn btn-primary">Ingresar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/media/Noticias/noticia2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Racing vs Peñarol</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus</p>
+              <a href="#" class="btn btn-primary">Ingresar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/media/Noticias/noticia3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Racing vs Puan Football Club</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus</p>
+              <a href="#" class="btn btn-primary">Ingresar</a>
+            </div>
+          </div>
+    </section>
 </body>
 </html>
